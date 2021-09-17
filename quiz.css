@@ -36,7 +36,8 @@ h3 {
 /* Questions */
 h2 {
   color: rgb(54, 100, 237);
-  font-size: 24pt;
+  font-size: 20pt;
+  font-weight: 200;
   font-family: monospace;
   margin: 15px 10px;
 }
@@ -48,9 +49,8 @@ li {
   justify-content: flex-start;
   font-family: monospace;
   color: rgb(73, 120, 79);
-  font-size: 16pt;
+  font-size: 13pt;
   font-weight: 100;
-  margin: 10px;
 }
 
 ul {
@@ -132,26 +132,26 @@ section {
 
 /* All answers */
 article {
-    background-color: black;
-    text-align: center;
-  }
+  text-align: left;
+}
 
 /* Answer Buttons IDs   */
 #btnA,
 #btnB,
 #btnC,
 #btnD {
-  width: 150px;
   background-color: none;
   color: rgb(210, 185, 83);
+  background-color: black;
   border-radius: 15pt;
   border: none;
   margin: 10px 20px;
   padding: 10px;
+  visibility: hidden;
 }
 
 button {
-  background-color: black;
+  background-image: linear-gradient(rgb(16, 16, 16), rgb(18, 18, 18));
   width: 200px;
   border: none;
   border-radius: 15pt;
@@ -163,21 +163,39 @@ button h4:hover {
 }
 
 footer {
-    width: 100%;
-    height: 75px;
-    font-family: monospace;
-    font-size: 10pt;
-    text-align: center;
-    color: black;
-    background-color:rgb(36, 36, 36);
-    margin-top: 50px;
+  width: 100%;
+  height: 100px;
+  font-family: monospace;
+  font-size: 10pt;
+  text-align: center;
+  color: rgb(87, 87, 87);
+  background-color: rgb(40 39 39);
+  margin-top: 100px;
+  padding: 40px;
 }
 
-
 @media screen and (max-width: 1100px) {
-    .flexpage {
-        flex-direction: column;
-        width: 100%;
-        justify-content: space-around;
-        align-items: center;
+  .flexpage {
+    flex-direction: column-reverse;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .flexcenter :nth-child(1) {
+    order: 2;
+  }
+  .flexcenter :nth-child(2) {
+    order: 1;
+  }
+
+  .flexpage :nth-child(3) {
+    order: 1;
+  }
+  .flexpage :nth-child(2) {
+    order: 3;
+  }
+
+  .flexpage :nth-child(3) {
+    order: 2;
+  }
 }
