@@ -118,23 +118,129 @@ function question2() {
   }
 }
 
-function question3() {}
+// Loads Question 3 by replacing all textContent
+function question3() {
+  var answerElA = document.getElementById("btnA");
+  var answerElB = document.getElementById("btnB");
+  var answerElC = document.getElementById("btnC");
+  var answerElD = document.getElementById("btnD");
+  questionEl.textContent =
+    "[How do you find the number with the highest value of x and y?]";
+  answerElA.textContent = "Math.max(x, y)";
+  answerElB.textContent = "ceil(x, y)";
+  answerElC.textContent = "Math.ceil(x, y)";
+  answerElD.textContent = "top(x, y)";
+  var answerElA = document
+    .getElementById("btnA")
+    .addEventListener("click", answer3a);
+  var answerElB = document
+    .getElementById("btnB")
+    .addEventListener("click", answer3b);
+  var answerElC = document
+    .getElementById("btnC")
+    .addEventListener("click", answer3c);
+  var answerElD = document
+    .getElementById("btnD")
+    .addEventListener("click", answer3d);
+  function answer3a() {
+    correctSound.play();
+    question4();
+  }
+  function answer3b() {
+    wrongSound.play();
+    return;
+  }
+  function answer3c() {
+    wrongSound.play();
+    return;
+  }
+  function answer3d() {
+    wrongSound.play();
+    return;
+  }
+}
 
-// var question3 =
-//   "[How do you find the number with the highest value of x and y?]";
-// var answer3a = "Math.max(x, y)";
-// var answer3b = "ceil(x, y)";
-// var answer3c = "Math.ceil(x, y)";
-// var answer3d = "top(x, y)";
+// Loads Question 4 by replacing all textContent
+function question4() {
+  var answerElA = document.getElementById("btnA");
+  var answerElB = document.getElementById("btnB");
+  var answerElC = document.getElementById("btnC");
+  var answerElD = document.getElementById("btnD");
+  questionEl.textContent =
+    "[Which of the following are capabilities of functions in JavaScript?]";
+  answerElA.textContent = "Return a value";
+  answerElB.textContent = "Accept parameters";
+  answerElC.textContent = "Accept parameters and Return a value";
+  answerElD.textContent = "None of the above";
+  var answerElA = document
+    .getElementById("btnA")
+    .addEventListener("click", answer4a);
+  var answerElB = document
+    .getElementById("btnB")
+    .addEventListener("click", answer4b);
+  var answerElC = document
+    .getElementById("btnC")
+    .addEventListener("click", answer4c);
+  var answerElD = document
+    .getElementById("btnD")
+    .addEventListener("click", answer4d);
+  function answer4a() {
+    wrongSound.play();
+    return;
+  }
+  function answer4b() {
+    correctSound.play();
+    question5();
+  }
+  function answer4c() {
+    wrongSound.play();
+    return;
+  }
+  function answer4d() {
+    wrongSound.play();
+    return;
+  }
+}
 
-// var question4 = "[]";
-// var answer4a = "";
-// var answer4b = "";
-// var answer4c = "";
-// var answer4d = "";
+function question5() {
+  var answerElA = document.getElementById("btnA");
+  var answerElB = document.getElementById("btnB");
+  var answerElC = document.getElementById("btnC");
+  var answerElD = document.getElementById("btnD");
+  questionEl.textContent =
+    "[Which of the following is not considered a JavaScript operator?]";
+  answerElA.textContent = "new";
+  answerElB.textContent = "this";
+  answerElC.textContent = "delete";
+  answerElD.textContent = "typeof";
+  var answerElA = document
+    .getElementById("btnA")
+    .addEventListener("click", answer5a);
+  var answerElB = document
+    .getElementById("btnB")
+    .addEventListener("click", answer5b);
+  var answerElC = document
+    .getElementById("btnC")
+    .addEventListener("click", answer5c);
+  var answerElD = document
+    .getElementById("btnD")
+    .addEventListener("click", answer5d);
+  function answer5a() {
+    wrongSound.play();
+    return;
+  }
+  function answer5b() {
+    correctSound.play();
+    message();
+  }
+  function answer5c() {
+    wrongSound.play();
+    return;
+  }
+  function answer5d() {
+    wrongSound.play();
+    return;
+  }
+}
 
-// var question5 = "[]";
-// var answer5a = "";
-// var answer5b = "";
-// var answer5c = "";
-// var answer5d = "";
+function message() {}
