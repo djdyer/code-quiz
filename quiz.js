@@ -41,61 +41,100 @@ function quizStart() {
   answerD.setAttribute("style", "visibility:visible");
 }
 
-function question1() {
+// Targeting Answer Buttons
+var answerElA = document
+  .getElementById("btnA")
+  .addEventListener("click", answer1a);
+var answerElB = document
+  .getElementById("btnB")
+  .addEventListener("click", answer1b);
+var answerElC = document
+  .getElementById("btnC")
+  .addEventListener("click", answer1c);
+var answerElD = document
+  .getElementById("btnD")
+  .addEventListener("click", answer1d);
+
+//   Sound effects
+var correctSound = new Audio("./sounds/correct.wav");
+var wrongSound = new Audio("./sounds/wrong.mp3");
+
+// Evaluates Question 1 answers for correct/incorrect, returns sound effect
+function answer1a() {
+  wrongSound.play();
+  return;
+}
+function answer1b() {
+  wrongSound.play();
+  return;
+}
+function answer1c() {
+  wrongSound.play();
+  return;
+}
+function answer1d() {
+  correctSound.play();
+  question2();
+}
+
+// Loads the Question 2 by replacing all textcontent
+function question2() {
+  var answerElA = document.getElementById("btnA");
+  var answerElB = document.getElementById("btnB");
+  var answerElC = document.getElementById("btnC");
+  var answerElD = document.getElementById("btnD");
+  questionEl.textContent = "[How does a FOR loop start?]";
+  answerElA.textContent = "for i = 1 to 5";
+  answerElB.textContent = "for (i = 0; i<=5)";
+  answerElC.textContent = "for (i = 0; i<=5; i++)";
+  answerElD.textContent = "for (i <=5; i++)";
   var answerElA = document
     .getElementById("btnA")
-    .addEventListener("click", evaluateA());
+    .addEventListener("click", answer2a);
   var answerElB = document
     .getElementById("btnB")
-    .addEventListener("click", evaluateB());
+    .addEventListener("click", answer2b);
   var answerElC = document
     .getElementById("btnC")
-    .addEventListener("click", evaluateC());
+    .addEventListener("click", answer2c);
   var answerElD = document
     .getElementById("btnD")
-    .addEventListener("click", evaluateD());
-
-  function evaluateA() {
-    // incorect sound triggers
+    .addEventListener("click", answer2d);
+  function answer2a() {
+    wrongSound.play();
     return;
   }
-  function evaluateB() {
-    // incorrect sound triggers
+  function answer2b() {
+    wrongSound.play();
     return;
   }
-  function evaluateC() {
-    // incorrect sound triggers
-    return;
+  function answer2c() {
+    correctSound.play();
+    question3();
   }
-  function evaluateD() {
-    // CORRECT sound triggers
-    question2();
+  function answer2d() {
+    wrongSound.play();
+    return;
   }
 }
 
-var question2 = "How does a FOR loop start?";
-var answer2a = "for i = 1 to 5";
-var answer2b = "for (i = 0; i<=5)";
-var answer2c = "for (i = 0; i<=5; i++)";
-var answer2d = "for (i <=5; i++)";
+function question3() {}
 
-funct;
+// var question3 =
+//   "[How do you find the number with the highest value of x and y?]";
+// var answer3a = "Math.max(x, y)";
+// var answer3b = "ceil(x, y)";
+// var answer3c = "Math.ceil(x, y)";
+// var answer3d = "top(x, y)";
 
-var question3 =
-  "[How do you find the number with the highest value of x and y?]";
-var answer3a = "Math.max(x, y)";
-var answer3b = "ceil(x, y)";
-var answer3c = "Math.ceil(x, y)";
-var answer3d = "top(x, y)";
+// var question4 = "[]";
+// var answer4a = "";
+// var answer4b = "";
+// var answer4c = "";
+// var answer4d = "";
 
-var question4 = "[]";
-var answer4a = "";
-var answer4b = "";
-var answer4c = "";
-var answer4d = "";
-
-var question5 = "[]";
-var answer5a = "";
-var answer5b = "";
-var answer5c = "";
-var answer5d = "";
+// var question5 = "[]";
+// var answer5a = "";
+// var answer5b = "";
+// var answer5c = "";
+// var answer5d = "";
