@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Code Quiz</title>
+        <link rel="stylesheet" href="./reset.css" />
+        <link rel="stylesheet" href="./quiz.css" />
+    <body>
+        <!-- Header, Title, Emoji -->
+        <header>
+            <h1><span>&lt;</span>codeQuiz<span>&gt;</span></h1>
+            <h3>&#129299;</h3>
+        </header>
+
+        <main class="flexpage">
+
+            <!-- View High Scores Button -->
+            <aside id=scoresBtn>
+                <h4>
+                <a href="./scores.html"><span>./</span>view_highscores</a></h4>
+            </aside>
+
+            <!-- Quiz Block -->
+            <div class="flexcenter">
+                <section>
+                    <h2>[test your javaScript]</h2>
+                    <ul>
+                        <li>/* A
+                            <article id="btnA">answer</article>
+                        </li>s
+                        <li>/* B
+                            <article id="btnB">answer</article>
+                        </li>
+                        <li>/* C
+                            <article id="btnC">answer</article>
+                        </li>
+                        <li>/* D
+                            <article id="btnD">answer</article>
+                        </li>
+                    </ul>
+                </section>
+                <button id="start">
+                    <h4><span>&lt;</span>start quiz<span>&gt;</span></h4>
+                </button>
+            </div>
+
+            <!-- Time Remaining Clock -->
+            <aside>
+                <h4><span>./</span>time_remaining</h4>
+                <div class="clock">
+                    <h5 id=timer>20</h5>
+                    <h6>seconds</h6>
+                </div>
+            </aside>
+
+        </main>
+
+    </body>
+
+    <footer>
+        Dyer Design © 2021
+    </footer>
+
+    <script src="./quiz.js"></script>
+
+</html>
+

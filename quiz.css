@@ -1,0 +1,183 @@
+header {
+  width: 100%;
+  height: 150px;
+  background-image: linear-gradient(rgb(16, 16, 16), rgb(18, 18, 18));
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  border-bottom: 3px solid rgb(251, 0, 213);
+  box-shadow: 0 2pt 3pt rgb(0, 0, 0);
+  margin-bottom: 50px;
+}
+
+body {
+  background-color: rgb(36, 36, 36);
+}
+
+/* Title Text */
+h1 {
+  font-family: monospace;
+  font-weight: 100;
+  font-size: 28px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+span {
+  color: rgb(87, 87, 87);
+}
+
+/* Emoji  */
+h3 {
+  font-size: 20pt;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Questions */
+h2 {
+  color: rgb(54, 100, 237);
+  font-size: 24pt;
+  font-family: monospace;
+  margin: 15px 10px;
+}
+
+/* Answer Options (not the answer buttons) */
+li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: monospace;
+  color: rgb(73, 120, 79);
+  font-size: 16pt;
+  font-weight: 100;
+  margin: 10px;
+}
+
+ul {
+  margin-top: 20px;
+}
+
+/* Highsores link */
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+a:hover {
+  color: rgb(251, 0, 213);
+}
+
+/* View Highsores & Time Remaining Text */
+h4 {
+  font-family: monospace;
+  font-size: 12pt;
+  font-weight: 100;
+  color: rgb(255, 255, 255);
+  margin: 10px 5px 10px 5px;
+}
+
+/* Time on the clock */
+h5 {
+  font-family: monospace;
+  font-size: 30pt;
+  font-weight: 200;
+  padding: 10px 0;
+  color: rgb(251, 0, 213);
+}
+
+/* Seconds label */
+h6 {
+  padding: 15px 15px 15px 5px;
+  font-family: monospace;
+  color: rgb(251, 0, 213);
+}
+
+.flexpage {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flexcenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+aside {
+  width: 200px;
+  border-radius: 15pt;
+  background-image: linear-gradient(rgb(16, 16, 16), rgb(18, 18, 18));
+  margin: 40px;
+  text-align: center;
+}
+
+.clock {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: rgb(0, 0, 0);
+  border-radius: 0 0 14pt 14pt;
+}
+
+section {
+  width: 600px;
+  padding: 20px;
+  margin: 40px 0;
+  border-radius: 15pt;
+  background-image: linear-gradient(rgb(16, 16, 16), rgb(18, 18, 18));
+}
+
+/* All answers */
+article {
+    background-color: black;
+    text-align: center;
+  }
+
+/* Answer Buttons IDs   */
+#btnA,
+#btnB,
+#btnC,
+#btnD {
+  width: 150px;
+  background-color: none;
+  color: rgb(210, 185, 83);
+  border-radius: 15pt;
+  border: none;
+  margin: 10px 20px;
+  padding: 10px;
+}
+
+button {
+  background-color: black;
+  width: 200px;
+  border: none;
+  border-radius: 15pt;
+  margin: 50px auto;
+}
+
+button h4:hover {
+  color: rgb(251, 0, 213);
+}
+
+footer {
+    width: 100%;
+    height: 75px;
+    font-family: monospace;
+    font-size: 10pt;
+    text-align: center;
+    color: black;
+    background-color:rgb(36, 36, 36);
+    margin-top: 50px;
+}
+
+
+@media screen and (max-width: 1100px) {
+    .flexpage {
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+}
