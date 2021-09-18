@@ -74,32 +74,29 @@ function answer1c() {
 }
 function answer1d() {
   correctSound.play();
-  question2();
+  // question2();
+
+  question2(
+    document.getElementById("btnA"),
+    document.getElementById("btnB"),
+    document.getElementById("btnC"),
+    document.getElementById("btnD"),
+    questionEl,
+    "[How does a FOR loop start?]"
+  );
 }
 
 // Loads the Question 2 by replacing all textcontent
-function question2() {
-  var answerElA = document.getElementById("btnA");
-  var answerElB = document.getElementById("btnB");
-  var answerElC = document.getElementById("btnC");
-  var answerElD = document.getElementById("btnD");
-  questionEl.textContent = "[How does a FOR loop start?]";
-  answerElA.textContent = "for i = 1 to 5";
-  answerElB.textContent = "for (i = 0; i<=5)";
-  answerElC.textContent = "for (i = 0; i<=5; i++)";
-  answerElD.textContent = "for (i <=5; i++)";
-  var answerElA = document
-    .getElementById("btnA")
-    .addEventListener("click", answer2a);
-  var answerElB = document
-    .getElementById("btnB")
-    .addEventListener("click", answer2b);
-  var answerElC = document
-    .getElementById("btnC")
-    .addEventListener("click", answer2c);
-  var answerElD = document
-    .getElementById("btnD")
-    .addEventListener("click", answer2d);
+function question2(btnA, btnB, btnC, btnD, questionEl, questionText) {
+  questionEl.textContent = questionText;
+  btnA.textContent = "for i = 1 to 5";
+  btnB.textContent = "for (i = 0; i<=5)";
+  btnC.textContent = "for (i = 0; i<=5; i++)";
+  btnD.textContent = "for (i <=5; i++)";
+  btnA.addEventListener("click", answer2a);
+  btnB.addEventListener("click", answer2b);
+  btnC.addEventListener("click", answer2c);
+  btnD.addEventListener("click", answer2d);
   function answer2a() {
     wrongSound.play();
     return;
@@ -110,7 +107,14 @@ function question2() {
   }
   function answer2c() {
     correctSound.play();
-    question3();
+    question3(
+      document.getElementById("btnA"),
+      document.getElementById("btnB"),
+      document.getElementById("btnC"),
+      document.getElementById("btnD"),
+      questionEl,
+      "[How do you find the number with the highest value of x and y?]"
+    );
   }
   function answer2d() {
     wrongSound.play();
@@ -119,32 +123,26 @@ function question2() {
 }
 
 // Loads Question 3 by replacing all textContent
-function question3() {
-  var answerElA = document.getElementById("btnA");
-  var answerElB = document.getElementById("btnB");
-  var answerElC = document.getElementById("btnC");
-  var answerElD = document.getElementById("btnD");
-  questionEl.textContent =
-    "[How do you find the number with the highest value of x and y?]";
-  answerElA.textContent = "Math.max(x, y)";
-  answerElB.textContent = "ceil(x, y)";
-  answerElC.textContent = "Math.ceil(x, y)";
-  answerElD.textContent = "top(x, y)";
-  var answerElA = document
-    .getElementById("btnA")
-    .addEventListener("click", answer3a);
-  var answerElB = document
-    .getElementById("btnB")
-    .addEventListener("click", answer3b);
-  var answerElC = document
-    .getElementById("btnC")
-    .addEventListener("click", answer3c);
-  var answerElD = document
-    .getElementById("btnD")
-    .addEventListener("click", answer3d);
+function question3(btnA, btnB, btnC, btnD, questionEl, questionText) {
+  questionEl.textContent = questionText;
+  btnA.textContent = "Math.max(x, y)";
+  btnB.textContent = "ceil(x, y)";
+  btnC.textContent = "Math.ceil(x, y)";
+  btnD.textContent = "top(x, y)";
+  btnA.addEventListener("click", answer3a);
+  btnB.addEventListener("click", answer3b);
+  btnC.addEventListener("click", answer3c);
+  btnD.addEventListener("click", answer3d);
   function answer3a() {
     correctSound.play();
-    question4();
+    question4(
+      document.getElementById("btnA"),
+      document.getElementById("btnB"),
+      document.getElementById("btnC"),
+      document.getElementById("btnD"),
+      questionEl,
+      "[Which of the following are capabilities of functions in JavaScript?]]"
+    );
   }
   function answer3b() {
     wrongSound.play();
@@ -161,36 +159,30 @@ function question3() {
 }
 
 // Loads Question 4 by replacing all textContent
-function question4() {
-  var answerElA = document.getElementById("btnA");
-  var answerElB = document.getElementById("btnB");
-  var answerElC = document.getElementById("btnC");
-  var answerElD = document.getElementById("btnD");
-  questionEl.textContent =
-    "[Which of the following are capabilities of functions in JavaScript?]";
-  answerElA.textContent = "Return a value";
-  answerElB.textContent = "Accept parameters";
-  answerElC.textContent = "Accept parameters and Return a value";
-  answerElD.textContent = "None of the above";
-  var answerElA = document
-    .getElementById("btnA")
-    .addEventListener("click", answer4a);
-  var answerElB = document
-    .getElementById("btnB")
-    .addEventListener("click", answer4b);
-  var answerElC = document
-    .getElementById("btnC")
-    .addEventListener("click", answer4c);
-  var answerElD = document
-    .getElementById("btnD")
-    .addEventListener("click", answer4d);
+function question4(btnA, btnB, btnC, btnD, questionEl, questionText) {
+  questionEl.textContent = questionText;
+  btnA.textContent = "Return a value";
+  btnB.textContent = "Accept parameters";
+  btnC.textContent = "Accept parameters and Return a value";
+  btnD.textContent = "None of the above";
+  btnA.addEventListener("click", answer4a);
+  btnB.addEventListener("click", answer4b);
+  btnC.addEventListener("click", answer4c);
+  btnD.addEventListener("click", answer4d);
   function answer4a() {
     wrongSound.play();
     return;
   }
   function answer4b() {
     correctSound.play();
-    question5();
+    question5(
+      document.getElementById("btnA"),
+      document.getElementById("btnB"),
+      document.getElementById("btnC"),
+      document.getElementById("btnD"),
+      questionEl,
+      "[Which of the following is not considered a JavaScript operator?]"
+    );
   }
   function answer4c() {
     wrongSound.play();
@@ -202,45 +194,34 @@ function question4() {
   }
 }
 
-function question5() {
-  var answerElA = document.getElementById("btnA");
-  var answerElB = document.getElementById("btnB");
-  var answerElC = document.getElementById("btnC");
-  var answerElD = document.getElementById("btnD");
-  questionEl.textContent =
-    "[Which of the following is not considered a JavaScript operator?]";
-  answerElA.textContent = "new";
-  answerElB.textContent = "this";
-  answerElC.textContent = "delete";
-  answerElD.textContent = "typeof";
-  var answerElA = document
-    .getElementById("btnA")
-    .addEventListener("click", answer5a);
-  var answerElB = document
-    .getElementById("btnB")
-    .addEventListener("click", answer5b);
-  var answerElC = document
-    .getElementById("btnC")
-    .addEventListener("click", answer5c);
-  var answerElD = document
-    .getElementById("btnD")
-    .addEventListener("click", answer5d);
+function question5(btnA, btnB, btnC, btnD, questionEl, questionText) {
+  questionEl.textContent = questionText;
+  btnA.textContent = "new";
+  btnB.textContent = "this";
+  btnC.textContent = "delete";
+  btnD.textContent = "typeof";
+  btnA.addEventListener("click", answer5a);
+  btnB.addEventListener("click", answer5b);
+  btnC.addEventListener("click", answer5c);
+  btnD.addEventListener("click", answer5d);
   function answer5a() {
     wrongSound.play();
-    return;
+    messageLose();
   }
   function answer5b() {
     correctSound.play();
-    message();
+    messageWin();
   }
   function answer5c() {
     wrongSound.play();
-    return;
+    messageLose();
   }
   function answer5d() {
     wrongSound.play();
-    return;
+    messageLose();
   }
 }
 
-function message() {}
+function messageWin() {}
+
+function messageLose() {}

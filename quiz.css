@@ -208,10 +208,11 @@ footer {
 
   footer {
     position: relative;
-}
+  }
 
-@media screen and (max-width: 900px) {
-  aside {
-    width: 200px;
+  @media screen and (max-width: 900px) {
+    aside {
+      width: 200px;
+    }
   }
 }
