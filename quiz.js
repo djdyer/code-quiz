@@ -26,6 +26,16 @@ function quizStart() {
     }
   }, 1000);
 
+  // WRONG ANSWERS MUST SUBTRACT 5 SECONDS FROM TIMER !?
+  // answer1a(), answer1b(), answer1c(), answer2a(), answer2b(), answer2d(),
+  // answer3b(), answer3c(), answer3d(), answer4a(), answer4c(), answer4d(),
+  // answer5a(), answer5c(), answer5d()
+
+  if (startBtn == true) {
+    var hideBtn = document.getElementById("start");
+    hideBtn.setAttribute("style", "opacity: .5");
+  }
+
   //   Makes first question replace intro text
   var question1 = "[What is the correct way to write a JavaScript array?]";
   questionEl.textContent = question1;
@@ -62,6 +72,7 @@ var wrongSound = new Audio("./sounds/wrong.mp3");
 // Evaluates Question 1 answers for correct/incorrect, returns sound effect
 function answer1a() {
   wrongSound.play();
+  timerEl;
   return;
 }
 function answer1b() {
@@ -74,8 +85,6 @@ function answer1c() {
 }
 function answer1d() {
   correctSound.play();
-  // question2();
-
   question2(
     document.getElementById("btnA"),
     document.getElementById("btnB"),
@@ -105,6 +114,7 @@ function question2(btnA, btnB, btnC, btnD, questionEl, questionText) {
     wrongSound.play();
     return;
   }
+  // Correct answer 2
   function answer2c() {
     correctSound.play();
     question3(
@@ -133,6 +143,7 @@ function question3(btnA, btnB, btnC, btnD, questionEl, questionText) {
   btnB.addEventListener("click", answer3b);
   btnC.addEventListener("click", answer3c);
   btnD.addEventListener("click", answer3d);
+  // Correct answer 3
   function answer3a() {
     correctSound.play();
     question4(
@@ -173,6 +184,8 @@ function question4(btnA, btnB, btnC, btnD, questionEl, questionText) {
     wrongSound.play();
     return;
   }
+
+  // Correct answer 4
   function answer4b() {
     correctSound.play();
     question5(
@@ -208,6 +221,7 @@ function question5(btnA, btnB, btnC, btnD, questionEl, questionText) {
     wrongSound.play();
     messageLose();
   }
+  // Correct answer 5
   function answer5b() {
     correctSound.play();
     messageWin();
@@ -222,6 +236,7 @@ function question5(btnA, btnB, btnC, btnD, questionEl, questionText) {
   }
 }
 
-function messageWin() {}
+var correctAnswer = 20;
+var timePoints = function messageWin() {};
 
 function messageLose() {}
