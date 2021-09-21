@@ -44,11 +44,32 @@
                 </button>
             </div>
 
+            <!-- You win pop-up, default visibility hidden -->
+            <div class="messageWin">
+                <button id="closeBtn">X</button> 
+                <figure>
+                    <img id="youwin" src="images/win.png" alt="you win">
+                </figure>
+                <h2 class="yourscore">[score === 1000]</h2>
+                <h6><span>./</span>key_initials:</h6>
+                <input id="initials">
+                </input>
+            </div>
+
+            <!-- Game Over Pop-up, default visibility hidden -->
+            <div class="messageLose">
+                <button id="closeBtn">X</button>
+                <figure>
+                    <img id="youlose" src="images/lose.png" alt="you lose">
+                </figure>
+                <h2 class="yourscore">[score === 1000]</h2>
+            </div>
+
             <!-- Time Remaining Clock -->
             <aside>
                 <h4><span>./</span>time_remaining</h4>
                 <div class="clock">
-                    <h5 id=timer>30</h5>
+                    <h5 id=timer>60</h5>
                     <h6 id=second>seconds</h6>
                 </div>
             </aside>
