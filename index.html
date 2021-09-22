@@ -6,7 +6,6 @@
         <link rel="stylesheet" href="./reset.css" />
         <link rel="stylesheet" href="./quiz.css" />
     <body>
-        <!-- Header, Title, Emoji -->
         <header>
             <h1><span>&lt;</span>codeQuiz<span>&gt;</span></h1>
             <h3>&#129299;</h3>
@@ -14,13 +13,13 @@
 
         <main class="flexpage">
 
-            <!-- View High Scores Button -->
+            <!-- HIGH SCORES BUTTON -->
             <aside id=scoresBtn>
                 <h4>
                 <a href="./scores.html"><span>./</span>view_highscores</a></h4>
             </aside>
 
-            <!-- Quiz Block -->
+            <!-- QUIZ BLOCK -->
             <div class="flexcenter">
                 <section>
                     <h2 id=question>[test your JavaScript skills]</h2>
@@ -44,25 +43,27 @@
                 </button>
             </div>
 
-            <!-- You win pop-up, default visibility hidden -->
+            <!-- YOU WIN POP UP -->
             <div class="messageWin">
-                <button id="closeBtn">X</button> 
+                <button class="closeBtn" onclick="restart()"
+                >x</button> 
                 <figure>
                     <img id="youwin" src="images/win.png" alt="you win">
                 </figure>
-                <h2 class="yourscore">[score === 1000]</h2>
+                <h2 class="yourscore">[0 === pts.]</h2>
                 <h6><span>./</span>key_initials:</h6>
                 <input id="initials">
                 </input>
             </div>
 
-            <!-- Game Over Pop-up, default visibility hidden -->
+            <!-- GAME OVER POP UP -->
             <div class="messageLose">
-                <button id="closeBtn">X</button>
+                <button class="closeBtn" onclick="restart()"
+                >x</button>
                 <figure>
                     <img id="youlose" src="images/lose.png" alt="you lose">
                 </figure>
-                <h2 class="yourscore">[score === 1000]</h2>
+                <h2 class="yourscore">[0 === pts.]</h2>
             </div>
 
             <!-- Time Remaining Clock -->
@@ -75,8 +76,10 @@
             </aside>
 
         </main>
+
         <footer>dyer.design © 2021
         </footer>
+
     <script src="./quiz.js"></script>
     </body>
 </html>
