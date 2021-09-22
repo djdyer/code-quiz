@@ -1,35 +1,4 @@
-// var questions = [
-//   {title: "what is 2 + 2",
-//   choices: ["1", "4", "5", "3"],
-//   answer: "4"
-//   },
-//   {title: "question 2",
-//   choices: ["answer1", "answer2", "answer3", "answer4"],
-//   answer: "answer3"
-//   }
-// ]
-// var questionIndex = 0;
-// function getQuestion() {
-//   var currentQuestion = questions[questionIndex];
-//   // display the question title and set the buttons to the choices
-// }
-
-// function checkAnswer(event) {
-// var userChoice = event.target.innerText;
-// if (userChoice === questions[questionIndex].answer){
-//   // tell the user the question was right
-// } else {
-//   //tell the user the question was wrong
-// }
-// questionIndex++;
-// if (questionIndex < questions.length) {
-//   getQuestion();
-// } else {
-//   // game over
-// }
-// }
-
-// Targets the start button to start the game
+// TARGETS START BUTTON
 var startBtn = document.getElementById("start");
 startBtn.addEventListener("click", quizStart);
 
@@ -40,15 +9,6 @@ var secondEl = document.getElementById("second");
 var timeLeft = 60;
 var score = 0;
 var quizOver = false;
-
-var history = localStorage.getItem("leaderboard");
-if (history.state !== null) {
-  console.log(history);
-  history = JSON.parse(history);
-} else {
-  history = [];
-}
-console.log(history);
 
 // BEGINS QUIZ, TIME STARTS
 function quizStart() {
@@ -78,7 +38,7 @@ function quizStart() {
   var question1 = "[What is the correct way to write a JavaScript array?]";
   questionEl.textContent = question1;
 
-  //   FIRST ANSWER BANK APPEARS, THEN TARGET PLACED ON EACH
+  // FIRST ANSWER BANK APPEARS, THEN TARGET PLACED ON EACH
   var answerA = document.getElementById("btnA");
   answerA.setAttribute("style", "visibility:visible");
   answerA.addEventListener("click", answer1a);
@@ -96,7 +56,7 @@ function quizStart() {
   answerD.addEventListener("click", answer1d);
 }
 
-//   SOUND
+// SOUND
 var correctSound = new Audio("./sounds/correct.wav");
 var wrongSound = new Audio("./sounds/wrong.mp3");
 
@@ -129,13 +89,6 @@ function answer1d() {
     "[How does a FOR loop start?]"
   );
 }
-
-// if (answer1a() == true || answer1a() == true || answer1a() == true) {
-//   wrongSound.play();
-//   timeLeft = timeLeft - 5;
-// } else {
-//   correctSound.play();
-//   question2();
 
 // QUESTION 2
 function question2(btnA, btnB, btnC, btnD, questionEl, questionText) {
@@ -333,6 +286,15 @@ function collectInitial(event) {
   }
 }
 
+// var history = localStorage.getItem("leaderboard");
+// if (history.state !== null) {
+//   console.log(history);
+//   history = JSON.parse(history);
+// } else {
+//   history = [];
+// }
+// console.log(history);
+
 // LOSE MESSAGE
 function messageLose() {
   var loseMsg = document.querySelector(".messageLose");
@@ -346,11 +308,11 @@ function restart() {
   close.addEventListener("click", location.reload());
 }
 
-function keyEntry() {
-  var initialsInput = document.getElementById("initials").value;
-  var scorePair = initialsInput + score;
-  console.log(scorePair);
-}
+// function keyEntry() {
+//   var initialsInput = document.getElementById("initials").value;
+//   var scorePair = initialsInput + score;
+//   console.log(scorePair);
+// }
 
 // NEED FUNCTION TO GATHER ALL SCORE PAIRS, RANK THEM IN ORDER
 // function leaderboard(event) {

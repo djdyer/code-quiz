@@ -1,5 +1,32 @@
 # 04 Web APIs: Code Quiz
 
+## Repo Contents
+
+<li>README.md</li>
+<li>index.html</li>
+<li>scores.html</li>
+<li>quiz.js</li>
+<li>quiz.css</li>
+<li>scores.css</li>
+<li>reset.css</li>
+<li>code_quiz_1</li>
+<li>code_quiz_2</li>
+<li>images</li>
+<li>sounds</li>
+<li>Deployed URL</li>
+
+## Screens
+
+<br />
+<img src="./code_quiz_1.png">
+<br />
+<img src="./code_quiz_2.png">
+<br />
+
+## The Ask
+
+Create a quiz application to test the JavaScript knowledge of your classmates. Users click through interactive questions, then enter initials to save their highscore before resetting and starting over.
+
 ## User Story
 
 ```
@@ -8,24 +35,31 @@ I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
 SO THAT I can gauge my progress compared to my peers
 ```
 
-## Acceptance Criteria
+## Criteria
 
 ```
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and my score
+Start button begins quiz by loading first question/answer bank, starting timer at 60 seconds.
+
+Answering correctly moves on to the next question, earning 200 points.
+
+Answering incorrectly subtracts 5 seconds from timer, awarding no points.
+
+When all the questions are answered, user is presented with score and input field to save initials.
+
+If time depletes before completion, user is presented with score with no opportunity to save.
+
+Highscores button presents leaderboard with top 3 saved scores.
+
+Clear scores button removes all recently saved scores.
 ```
 
-## Mock-Up
+## Deployed URL
 
-The following animation demonstrates the application functionality:
+https://github.com/djdyer/code-quiz
+<br />
+https://djdyer.github.io/code-quiz
+<br />
 
-![A user clicks through an interactive coding quiz, then enters initials to save the high score before resetting and starting over.](./Assets/04-web-apis-homework-demo.gif)
+## Collaborators
+
+Code generated largely in deliberation and collaboration between BCS tutor Simon Rennocks, classmate Olsen Ogouchi, and myself.

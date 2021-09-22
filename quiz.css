@@ -14,7 +14,7 @@ body {
   min-height: 100vh;
 }
 
-/* Title Text */
+/* TITLE TEXT */
 h1 {
   font-family: monospace;
   color: rgb(255, 255, 255);
@@ -28,14 +28,14 @@ span {
   color: rgb(87, 87, 87);
 }
 
-/* Emoji  */
+/* EMOJI  */
 h3 {
   font-size: 20pt;
   text-align: center;
   margin-bottom: 30px;
 }
 
-/* Questions */
+/* QUESTIONS */
 h2 {
   color: rgb(54, 100, 237);
   font-size: 20pt;
@@ -44,7 +44,7 @@ h2 {
   margin: 15px 10px;
 }
 
-/* Answer key */
+/* ANSWER KEY */
 li {
   display: inline-flex;
   justify-items: left;
@@ -64,7 +64,7 @@ ul {
   justify-content: space-around;
 }
 
-/* Highsores link */
+/* HIGHSCORES LINK */
 a {
   text-decoration: none;
   color: rgb(255, 255, 255);
@@ -74,7 +74,7 @@ a:hover {
   color: rgb(251, 0, 213);
 }
 
-/* View Highsores & Time Remaining Text */
+/* BUTTON TEXT */
 h4 {
   font-family: monospace;
   font-size: 12pt;
@@ -84,7 +84,7 @@ h4 {
   padding: 5px;
 }
 
-/* Time on the clock */
+/* TIME ON CLOCK */
 h5 {
   font-family: monospace;
   font-size: 30pt;
@@ -93,7 +93,7 @@ h5 {
   color: rgb(251, 0, 213);
 }
 
-/* Seconds label */
+/* SECONDS */
 h6 {
   padding: 15px 15px 15px 5px;
   font-family: monospace;
@@ -141,12 +141,12 @@ section {
   background-image: linear-gradient(rgb(16, 16, 16), rgb(18, 18, 18));
 }
 
-/* All answers */
+/* ALL ANSWERS */
 article {
   text-align: left;
 }
 
-/* Answer Buttons IDs   */
+/* ANSWER BUTTON IDS  */
 #btnA,
 #btnB,
 #btnC,
@@ -184,7 +184,7 @@ button h4:hover {
   color: rgb(251, 0, 213);
 }
 
-/* You Win pop up window  */
+/* YOU WIN POP UP  */
 .messageWin {
   position: absolute;
   display: flex;
@@ -200,7 +200,7 @@ button h4:hover {
   visibility: hidden;
 }
 
-/* You Lose pop up window  */
+/* GAME OVER POP UP  */
 .messageLose {
   position: absolute;
   display: flex;
@@ -216,14 +216,14 @@ button h4:hover {
   visibility: hidden;
 }
 
-/* you win graphic */
+/* YOU WIN GRAPHIC */
 #youwin {
   margin: 30px auto;
   width: 150px;
   height: auto;
 }
 
-/* you lose graphic  */
+/* GAME OVER GRAPHIC  */
 #youlose {
   margin: 50px auto;
   width: 230px;

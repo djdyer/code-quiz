@@ -4,7 +4,7 @@ body {
   min-height: 100vh;
 }
 
-/* Title Text */
+/* TITLE */
 h1 {
   font-family: monospace;
   color: white;
@@ -18,24 +18,24 @@ span {
   color: rgb(87, 87, 87);
 }
 
-/* Emojies */
+/* EMOJIES */
 h3 {
   font-size: 20pt;
   text-align: center;
   margin: 20px 15px 20px 10px;
 }
 
-/* Names */
+/* INITIALS + SCORE PAIRS */
 h2 {
   color: rgb(54, 100, 237);
-  font-size: 20pt;
+  font-size: 18pt;
   font-weight: 200;
   font-family: monospace;
   margin: 15px 20px 15px 40px;
   text-align: left;
 }
 
-/* Equals + grid */
+/* COMMENTED OUT PREFIX */
 li {
   display: inline-flex;
   justify-items: left;
@@ -48,6 +48,7 @@ li {
   white-space: nowrap;
 }
 
+/* FULL CARD */
 section {
   width: 600px;
   padding: 20px 30px;
@@ -56,20 +57,13 @@ section {
   background-image: linear-gradient(rgb(16, 16, 16), rgb(18, 18, 18));
 }
 
+/* UL STYLING */
 #topthree {
   margin-top: 30px;
+  padding-left: 40px;
 }
 
-#firstplace {
-}
-
-#secondplace {
-}
-
-#thirdplace {
-}
-
-/* Go back button  */
+/* BUTTONS */
 button {
   color: white;
   background-image: linear-gradient(rgb(16, 16, 16), rgb(18, 18, 18));
@@ -77,10 +71,9 @@ button {
   border: none;
   border-radius: 20pt;
   margin: 30px;
-  opacity: 1;
 }
 
-/* Highsores link */
+/* BACK BUTTON */
 a {
   text-decoration: none;
   color: rgb(255, 255, 255);
@@ -90,7 +83,7 @@ a:hover {
   color: rgb(251, 0, 213);
 }
 
-/* View Highsores & Time Remaining Text */
+/* BUTTON TEXT */
 h4 {
   font-family: monospace;
   font-size: 12pt;
@@ -104,6 +97,7 @@ h4:hover {
   color: rgb(251, 0, 213);
 }
 
+/* PAGE FLEX */
 .options {
   display: flex;
   flex-direction: column;
@@ -111,6 +105,7 @@ h4:hover {
   margin: 40px auto;
 }
 
+/* BUTTON FLEX */
 div {
   display: flex;
   flex-wrap: nowrap;
@@ -134,10 +129,14 @@ footer {
 @media screen and (max-width: 700px) {
   section {
     width: 80%;
+    padding: 10px;
+  }
+
+  ul {
+    padding: 0;
   }
 
   footer {
     margin-top: 40px;
-    position: relative;
   }
 }
