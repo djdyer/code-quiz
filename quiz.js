@@ -272,27 +272,6 @@ function messageWin() {
   quizOver = true;
 }
 
-// COLLECTING INITIALS ENTRY / PAIRING WITH SCORE TO SAVE IN LOCAL
-// function collectInitial(event) {
-//   if (event.keyCode === 13) {
-//     var initials = event.target.value;
-//     var newScore = { score: score, initials: initials };
-//     history = history.push(newScore);
-//     localStorage.setItem("topthree", JSON.stringify(history));
-//     var winMsg = document.querySelector(".messageWin");
-//     winMsg.setAttribute("style", "visibility:hidden");
-//   }
-// }
-
-// var history = localStorage.getItem("topthree");
-// if (history.state !== null) {
-//   history = JSON.parse(history);
-// } else {
-//   history = [];
-// }
-
-// console.log(history);
-
 // LOSE MESSAGE
 function messageLose() {
   var loseMsg = document.querySelector(".messageLose");
@@ -306,27 +285,34 @@ function restart() {
   close.addEventListener("click", location.reload());
 }
 
+// INPUT FIELD TARGETED TO LAUNCH FUNCTION ON KEY PRESS
 var initialsInput = document.getElementById("initials");
 initialsInput.addEventListener("keypress", collectInitials);
-var scorePair = { initials: score };
 
+var leaderBoard = document.getElementById(
+  "firstplace",
+  "secondplace",
+  "thirdplace"
+);
+
+//  AFTER KEYING INTITIALS, PAIRS TO SCORE AND SAVES TO LOCAL STORAGE
+//  NEW PLAYER SCORE PAIR APPENDS TO ARRAY
 function collectInitials(event) {
   if (event.keyCode == 13) {
     event.preventDefault();
-    initialsInput = document.getElementById("initials").value;
-    localStorage.setItem("newEntry", JSON.stringify(scorePair));
+    var initials = event.target.value;
+    var scorePair = { score: score, initials: initials };
+    if (leaderBoard == null) {
+      localStorage.setItem("scores", JSON.stringify([scorePair]));
+    } else {
+      leaderBoard = JSON.parse(localStorage.getItem("scores"));
+      leaderBoard = leaderBoard.push(scorePair);
+      localStorage.setItem("scores", JSON.stringify(leaderBoard));
+    }
     var winMsg = document.querySelector(".messageWin");
     winMsg.setAttribute("style", "visibility:hidden");
+    console.log(initials);
+    console.log(scorePair);
     location.reload();
   }
 }
-
-console.log(initialsInput);
-console.log(scorePair);
-
-// NEED FUNCTION TO STORE SCORE PAIRS IN ARRAY, RANK THEM IN ORDER OF HIGHEST SCORE
-// function sortWinners() {
-
-// NEED FUNCTION TO FETCH SCORE PAIRS FROM LOCAL STORAGE
-// function printwinners() {
-// JSON.parse(localStorage.getItem(""))
