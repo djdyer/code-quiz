@@ -289,24 +289,19 @@ function restart() {
 var initialsInput = document.getElementById("initials");
 initialsInput.addEventListener("keypress", collectInitials);
 
-var leaderBoard = document.getElementById(
-  "firstplace",
-  "secondplace",
-  "thirdplace"
-);
-
 //  AFTER KEYING INTITIALS, PAIRS TO SCORE AND SAVES TO LOCAL STORAGE
 //  NEW PLAYER SCORE PAIR APPENDS TO ARRAY
 function collectInitials(event) {
   if (event.keyCode == 13) {
     event.preventDefault();
+    var leaderBoard = localStorage.getItem("scores");
     var initials = event.target.value;
     var scorePair = { score: score, initials: initials };
-    if (leaderBoard == null) {
+    if (!leaderBoard) {
       localStorage.setItem("scores", JSON.stringify([scorePair]));
     } else {
       leaderBoard = JSON.parse(localStorage.getItem("scores"));
-      leaderBoard = leaderBoard.push(scorePair);
+      leaderBoard.push(scorePair);
       localStorage.setItem("scores", JSON.stringify(leaderBoard));
     }
     var winMsg = document.querySelector(".messageWin");
