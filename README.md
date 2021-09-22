@@ -8,6 +8,7 @@
 <li>quiz.js</li>
 <li>quiz.css</li>
 <li>scores.css</li>
+<li>scores.js</li>
 <li>reset.css</li>
 <li>code_quiz_1</li>
 <li>code_quiz_2</li>
@@ -18,9 +19,9 @@
 ## Screens
 
 <br />
-<img src="./code_quiz_1.png">
+<img src="./assets/images/code_quiz_1.png">
 <br />
-<img src="./code_quiz_2.png">
+<img src="./assets/images/code_quiz_2.png">
 <br />
 
 ## The Ask
