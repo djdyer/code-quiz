@@ -262,8 +262,6 @@ function answer5d() {
 
 // TARGET TO DISPLAY FINAL SCORE
 var scoreEl = document.querySelector(".yourscore");
-var initialsInput = document.getElementById("initials");
-initialsInput.addEventListener("keypress", collectInitial);
 
 // WIN MESSAGE
 function messageWin() {
@@ -275,24 +273,24 @@ function messageWin() {
 }
 
 // COLLECTING INITIALS ENTRY / PAIRING WITH SCORE TO SAVE IN LOCAL
-function collectInitial(event) {
-  if (event.keyCode === 13) {
-    var initials = event.target.value;
-    var newScore = { score: score, initials: initials };
-    history.push(newScore);
-    localStorage.setItem("leaderboard", JSON.stringify(history));
-    var winMsg = document.querySelector(".messageWin");
-    winMsg.setAttribute("style", "display:none");
-  }
-}
+// function collectInitial(event) {
+//   if (event.keyCode === 13) {
+//     var initials = event.target.value;
+//     var newScore = { score: score, initials: initials };
+//     history = history.push(newScore);
+//     localStorage.setItem("topthree", JSON.stringify(history));
+//     var winMsg = document.querySelector(".messageWin");
+//     winMsg.setAttribute("style", "visibility:hidden");
+//   }
+// }
 
-// var history = localStorage.getItem("leaderboard");
+// var history = localStorage.getItem("topthree");
 // if (history.state !== null) {
-//   console.log(history);
 //   history = JSON.parse(history);
 // } else {
 //   history = [];
 // }
+
 // console.log(history);
 
 // LOSE MESSAGE
@@ -302,22 +300,32 @@ function messageLose() {
   scoreEl.textContent = "[" + score + " === pts.]";
 }
 
-// RESTARTS GAME BY REFRESHING WINDOW
+// RESTARTS GAME BY CLOSING POP UP TO REFRESH WINDOW
 function restart() {
   var close = document.querySelector(".closeBtn");
   close.addEventListener("click", location.reload());
 }
 
-// function keyEntry() {
-//   var initialsInput = document.getElementById("initials").value;
-//   var scorePair = initialsInput + score;
-//   console.log(scorePair);
-// }
+var initialsInput = document.getElementById("initials");
+initialsInput.addEventListener("keypress", collectInitials);
+var scorePair = { initials: score };
 
-// NEED FUNCTION TO GATHER ALL SCORE PAIRS, RANK THEM IN ORDER
-// function leaderboard(event) {
-//   event.preventDefault();
-// }
+function collectInitials(event) {
+  if (event.keyCode == 13) {
+    event.preventDefault();
+    initialsInput = document.getElementById("initials").value;
+    localStorage.setItem("newEntry", JSON.stringify(scorePair));
+    var winMsg = document.querySelector(".messageWin");
+    winMsg.setAttribute("style", "visibility:hidden");
+    location.reload();
+  }
+}
+
+console.log(initialsInput);
+console.log(scorePair);
+
+// NEED FUNCTION TO STORE SCORE PAIRS IN ARRAY, RANK THEM IN ORDER OF HIGHEST SCORE
+// function sortWinners() {
 
 // NEED FUNCTION TO FETCH SCORE PAIRS FROM LOCAL STORAGE
 // function printwinners() {
