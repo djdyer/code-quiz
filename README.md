@@ -19,7 +19,11 @@
 ## Screens
 
 <br />
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cl9FFxNyA3o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+https://youtu.be/cl9FFxNyA3o
+[![CODE QUIZ](https://img.youtube.com/vi/cl9FFxNyA3o/0.jpg)](https://youtu.be/cl9FFxNyA3o)
+
+<br />
 <br />
 
 ## The Ask
