@@ -1,17 +1,17 @@
-# 04 Web APIs: Code Quiz
+## Code Quiz
+
+<br />
 
 ## Repo Contents
 
 <li>README.md</li>
 <li>index.html</li>
 <li>scores.html</li>
-<li>quiz.js</li>
 <li>quiz.css</li>
 <li>scores.css</li>
+<li>quiz.js</li>
 <li>scores.js</li>
 <li>reset.css</li>
-<li>code_quiz_1</li>
-<li>code_quiz_2</li>
 <li>images</li>
 <li>sounds</li>
 <li>Deployed URL</li>
@@ -19,9 +19,7 @@
 ## Screens
 
 <br />
-<img src="./assets/images/code_quiz_1.png">
-<br />
-<img src="./assets/images/code_quiz_2.png">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cl9FFxNyA3o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br />
 
 ## The Ask

@@ -86,7 +86,8 @@ function answer1d() {
     document.getElementById("btnC"),
     document.getElementById("btnD"),
     questionEl,
-    "[How does a FOR loop start?]"
+    "[How does a FOR loop start?]",
+    score
   );
 }
 
@@ -126,7 +127,8 @@ function answer2c() {
     document.getElementById("btnC"),
     document.getElementById("btnD"),
     questionEl,
-    "[How do you find the number with the highest value of x and y?]"
+    "[How do you find the number with the highest value of x and y?]",
+    score
   );
 }
 function answer2d() {
@@ -161,7 +163,8 @@ function answer3a() {
     document.getElementById("btnC"),
     document.getElementById("btnD"),
     questionEl,
-    "[Which of the following are capabilities of functions in JavaScript?]]"
+    "[Which of the following are capabilities of functions in JavaScript?]]",
+    score
   );
 }
 function answer3b() {
@@ -211,7 +214,8 @@ function answer4b() {
     document.getElementById("btnC"),
     document.getElementById("btnD"),
     questionEl,
-    "[Which of the following is not considered a JavaScript operator?]"
+    "[Which of the following is not considered a JavaScript operator?]",
+    score
   );
 }
 function answer4c() {
@@ -263,6 +267,8 @@ function answer5d() {
 // TARGET TO DISPLAY FINAL SCORE
 var scoreEl = document.querySelector(".yourscore");
 
+var losingScore = document.getElementById("youLose");
+
 // WIN MESSAGE ONLY FIRES WITH CORRECT ANSWER 5
 function messageWin() {
   var winMsg = document.querySelector(".messageWin");
@@ -276,7 +282,8 @@ function messageWin() {
 function messageLose() {
   var loseMsg = document.querySelector(".messageLose");
   loseMsg.setAttribute("style", "visibility:visible");
-  scoreEl.textContent = "[" + score + " === pts.]";
+  score -= 100;
+  losingScore.textContent = "[" + score + " === pts.]";
 }
 
 // RESTARTS GAME BY CLOSING POP UP TO REFRESH WINDOW

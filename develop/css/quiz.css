@@ -287,10 +287,6 @@ footer {
   section {
     width: 600px;
   }
-
-  footer {
-    position: relative;
-  }
 }
 
 @media screen and (max-width: 700px) {
