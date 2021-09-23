@@ -16,12 +16,20 @@
 <li>sounds</li>
 <li>Deployed URL</li>
 
-## Screens
+<br />
+
+
+## Screens / Demo
 
 <br />
 
-https://youtu.be/cl9FFxNyA3o
-[![CODE QUIZ](https://img.youtube.com/vi/cl9FFxNyA3o/0.jpg)](https://youtu.be/cl9FFxNyA3o)
+<img src="./assets/images/code_quiz_1.png">
+<br />
+<img src="./assets/images/code_quiz_2.png">
+<br />
+
+https://www.youtube.com/embed/cl9FFxNyA3o
+
 
 <br />
 <br />
