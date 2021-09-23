@@ -19,12 +19,12 @@ third.children[1].textContent = leaderBoard[2].score;
 
 // CLEARS LEADERBOARD
 clear.addEventListener("click", function () {
-  first.children[0].textContent = "";
-  first.children[1].textContent = "";
-  second.children[0].textContent = "";
-  second.children[1].textContent = "";
-  third.children[0].textContent = "";
-  third.children[1].textContent = "";
+  // first.children[0].textContent = "";
+  // first.children[1].textContent = "";
+  // second.children[0].textContent = "";
+  // second.children[1].textContent = "";
+  // third.children[0].textContent = "";
+  // third.children[1].textContent = "";
   localStorage.clear();
   location.reload();
 });
