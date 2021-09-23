@@ -11,11 +11,11 @@ var clear = document.getElementById("clearscore");
 // NEED FUNCTION TO RETRIEVE LEADERBOARD FROM LOCAL STORAGE, DISPLAY THEM ONSCREEN
 leaderBoard = JSON.parse(localStorage.getItem("scores"));
 first.children[0].textContent = leaderBoard[0].initials;
-first.children[2].textContent = leaderBoard[0].score;
+first.children[1].textContent = leaderBoard[0].score;
 second.children[0].textContent = leaderBoard[1].initials;
-second.children[2].textContent = leaderBoard[1].score;
+second.children[1].textContent = leaderBoard[1].score;
 third.children[0].textContent = leaderBoard[2].initials;
-third.children[2].textContent = leaderBoard[2].score;
+third.children[1].textContent = leaderBoard[2].score;
 
 // CLEARS LEADERBOARD
 clear.addEventListener("click", function () {
