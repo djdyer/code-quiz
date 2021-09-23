@@ -129,18 +129,23 @@ footer {
 #firstplace,
 #secondplace,
 #thirdplace {
+  padding-top: 10px;
   height: 50px;
-  width: 150px;
+  width: 180px;
 }
 
 @media screen and (max-width: 700px) {
   section {
     width: 80%;
-    padding: 10px;
+    padding: 5px;
   }
 
   ul {
     padding: 0;
+  }
+
+  h3 {
+    margin: 20px 10px 20px 0px;
   }
 
   footer {

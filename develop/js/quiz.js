@@ -263,7 +263,7 @@ function answer5d() {
 // TARGET TO DISPLAY FINAL SCORE
 var scoreEl = document.querySelector(".yourscore");
 
-// WIN MESSAGE
+// WIN MESSAGE ONLY FIRES WITH CORRECT ANSWER 5
 function messageWin() {
   var winMsg = document.querySelector(".messageWin");
   winMsg.setAttribute("style", "visibility:visible");
@@ -272,7 +272,7 @@ function messageWin() {
   quizOver = true;
 }
 
-// LOSE MESSAGE
+// LOSE MESSAGE ONLY FIRES WHEN CLOCK AT 0
 function messageLose() {
   var loseMsg = document.querySelector(".messageLose");
   loseMsg.setAttribute("style", "visibility:visible");
