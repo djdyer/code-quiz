@@ -206,6 +206,12 @@ function answer4a() {
 }
 // ANSWER 4
 function answer4b() {
+  wrongSound.play();
+  timeLeft -= 5;
+  return;
+}
+
+function answer4c() {
   correctSound.play();
   score += 200;
   question5(
@@ -217,11 +223,6 @@ function answer4b() {
     "[Which of the following is not considered a JavaScript operator?]",
     score
   );
-}
-function answer4c() {
-  wrongSound.play();
-  timeLeft -= 5;
-  return;
 }
 function answer4d() {
   wrongSound.play();

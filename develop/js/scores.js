@@ -9,7 +9,7 @@ clear.addEventListener("click", function () {
   location.reload();
 });
 
-// NEED FUNCTION TO STORE SCORE PAIRS IN ARRAY, RANK THEM IN ORDER OF HIGHEST SCORE
+// NEED FUNCTION RANK SCORE PAIRS IN ORDER OF HIGHEST SCORE
 // function sortWinners() {
 //   for (var i = 0; i < leaderBoard.length; i++);
 // }
