@@ -204,13 +204,12 @@ function answer4a() {
   timeLeft -= 5;
   return;
 }
-// ANSWER 4
 function answer4b() {
   wrongSound.play();
   timeLeft -= 5;
   return;
 }
-
+// ANSWER 4
 function answer4c() {
   correctSound.play();
   score += 200;
